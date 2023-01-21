@@ -1,1 +1,4 @@
 = markdown-convert-action
+
+* link:https://pandoc.org/[Pandoc] a universal document converter
+* link:https://daringfireball.net/projects/markdown/[Markdown] is a text-to-HTML conversion tool for web writers

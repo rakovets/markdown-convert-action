@@ -1,0 +1,17 @@
+name: 'MarkDown Convert Action'
+author: 'Dmitry Rakovets'
+description: 'MarkDown converter'
+
+inputs:
+  command:
+    description: 'Command for convert with Pandoc'
+    required: true
+    default: 'find . -name "*.md" | while read i; do pandoc -f markdown -t html5 "$i" -o "${i%.*}.html" -c "style.css"; done'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.command }}
+outputs:
+  time:
+    description: 'MarkDown-files Converted'
