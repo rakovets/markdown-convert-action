@@ -1,8 +1,8 @@
 FROM pandoc/core
 
-COPY entrypoint.sh /entrypoint.sh
-COPY style.css /style.css
+COPY ./entrypoint.sh /
+COPY style.css ./style.css
 
-RUN ls -ah
-
-ENTRYPOINT ["/entrypoint.sh"]
+#ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["bash"]
+CMD ["-c", "ls -lah /"]
