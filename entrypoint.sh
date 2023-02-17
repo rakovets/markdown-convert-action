@@ -1,3 +1,3 @@
-#!/bin/bash
+#!/bin/sh
 set -e
-bash -c "$@"
+sh -c "$@"
