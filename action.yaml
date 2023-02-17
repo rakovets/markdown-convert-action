@@ -6,7 +6,7 @@ inputs:
   command:
     description: 'Command for convert with Pandoc'
     required: true
-    default: 'find . -name "*.md" | while read i; do pandoc -f markdown -t html5 "$i" -o "${i%.*}.html" -c "style.css"; done'
+    default: 'find . -name "*.md" | while read i; do pandoc -f markdown -t html5 "$i" -o "${i%.*}.html" -c "style.css"; done; mv README.html index.html;'
 runs:
   using: 'docker'
   image: 'Dockerfile'
